@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #222;
+}
+
+div, header, footer, main, nav {
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 24px;
+    margin-right: 16px;
+    color: #222;
+}
+
+a:hover {
+    color: #e67e22;
+}
+
+#active {
+    color: #e67e22;
+}
+
+#phoneNum {
+    color: #ffffff;
+}
+
+#phoneNum:hover {
+    color: #e67e22;
+}
+
+img {
+    width: 1000px;
+    height: auto;
+}
+
+table {
+    padding: 10px;
+    border: 1px solid #222;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #222;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .about-image {
+        width: 500px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 28px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .popular-dishes {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .popular-dishes {
+        font-size: 16px;
+    }
+}
