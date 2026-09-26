@@ -1,0 +1,215 @@
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: white;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.dish:hover button {
+    background-color: tomato;
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.dish p:first-of-type {
+    font-size: 24px;
+}
+
+.dish p:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.dish p:nth-of-type(3) {
+    color: gray;
+}
+
+.dish button {
+    margin-top: auto;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #f1eee9;
+    cursor: pointer;
+}
+
+.order {
+    max-width: 1000px;
+    margin: 50px auto 30px;
+}
+
+.order > h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.order-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+}
+
+.order-block h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 28px;
+}
+
+.order-block > label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.order-block select,
+.order-block input[type="text"],
+.order-block input[type="email"],
+.order-block input[type="tel"],
+.order-block input[type="time"],
+.order-block textarea {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #888;
+    border-radius: 0;
+    margin-bottom: 18px;
+}
+
+.order-block select,
+.order-block input[type="text"],
+.order-block input[type="email"],
+.order-block input[type="tel"] {
+    height: 37px;
+}
+
+.order-block textarea {
+    height: 105px;
+    resize: vertical;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.checkbox-row input {
+    margin: 0;
+}
+
+.checkbox-row label {
+    font-size: 16px;
+}
+
+.delivery-note {
+    margin: -8px 0 20px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.delivery-title {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.radio-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-row input {
+    margin: 0 5px 0 0;
+}
+
+.radio-row label {
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.buttons button {
+    height: 32px;
+    padding: 0 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 800px) {
+
+    .dishes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .order-columns {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .order {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 24px;
+    }
+
+    section h2 {
+        text-align: center;
+    }
+
+    .dishes {
+        grid-template-columns: 1fr;
+    }
+
+    .order-columns {
+        grid-template-columns: 1fr;
+    }
+}
