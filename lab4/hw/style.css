@@ -1,0 +1,96 @@
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 28px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+h1 { margin: 0 0 16px; font-size: 1.7rem; }
+h2 { margin: 0 0 12px; font-size: 1.4rem; }
+p  { margin: 0 0 12px; line-height: 1.45; }
+
+.rules {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+.rules li { margin-bottom: 6px; }
+
+.info { margin: 6px 0; font-size: 1.1rem; }
+.info.small { font-size: 0.95rem; color: #555; }
+#timer.low { color: #c82333; font-weight: bold; }
+
+.question {
+  margin: 18px 0 4px;
+  min-height: 2.4rem;
+  font-size: 1.5rem;
+  word-break: break-word;
+}
+.hint { min-height: 1.2rem; margin-bottom: 14px; font-size: 0.85rem; color: #666; }
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+input[type="text"]:focus { outline: 2px solid #28a745; border-color: #28a745; }
+
+button {
+  margin-top: 12px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #28a745;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #218838; }
+button.secondary { background: #6c757d; }
+button.secondary:hover { background: #5a6268; }
+button:disabled { opacity: 0.6; cursor: default; }
+
+#bool-block { display: flex; justify-content: center; gap: 12px; }
+#bool-block button { min-width: 110px; }
+
+.feedback { min-height: 1.6rem; margin-top: 12px; font-size: 1.1rem; }
+.feedback.ok  { color: #1e7e34; }
+.feedback.bad { color: #c82333; }
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  font-size: 1rem;
+}
+.stats .ok  { color: #1e7e34; }
+.stats .bad { color: #c82333; }
+
+.actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }

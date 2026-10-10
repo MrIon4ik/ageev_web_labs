@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Математическая игра</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Математическая игра</h1>
+
+    <!-- Стартовый экран -->
+    <section id="screen-start">
+      <ul class="rules">
+        <li><b>Начальный</b> — арифметические операторы (+, -, *, /, %, **).</li>
+        <li><b>Средний</b> — арифметика и операторы сравнения (&gt;, &lt;, &gt;=, &lt;=, ===, !==).</li>
+        <li><b>Продвинутый</b> — логические операторы (&amp;&amp;, ||, !) и двоичные числа (&amp;, |, ^, &lt;&lt;, &gt;&gt;).</li>
+      </ul>
+      <p>На каждом уровне 10 вопросов и 5 минут. Чтобы перейти дальше, нужно ответить верно не менее чем на 80% (8 из 10).</p>
+      <button id="start-btn">Начать игру</button>
+    </section>
+
+    <!-- Экран игры -->
+    <section id="screen-game" hidden>
+      <div class="info">Уровень: <span id="level-name"></span></div>
+      <div class="info">Осталось времени: <span id="timer"></span></div>
+      <div class="info small">Вопрос <span id="q-number">1</span> из 10</div>
+
+      <div class="question" id="question"></div>
+      <div class="hint" id="hint"></div>
+
+      <div id="input-block">
+        <input type="text" id="answer" placeholder="Введите ваш ответ" autocomplete="off" aria-label="Ваш ответ">
+        <button id="submit-btn">Ответить</button>
+      </div>
+
+      <div id="bool-block" hidden>
+        <button id="btn-true">true</button>
+        <button id="btn-false">false</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+
+      <div class="stats">
+        <span class="ok">Верно: <b id="correct">0</b></span>
+        <span class="bad">Неверно: <b id="incorrect">0</b></span>
+      </div>
+    </section>
+
+    <!-- Экран результата -->
+    <section id="screen-result" hidden>
+      <h2 id="result-title"></h2>
+      <p id="result-text"></p>
+      <div class="actions" id="result-actions"></div>
+    </section>
+  </main>
+
+  <script src="math_game.js"></script>
+</body>
+</html>
